@@ -1,0 +1,23 @@
+{
+  "name": "login-portal",
+  "description": "user login and registration",
+  "main": "index.js",
+  "authors": [
+    "gaurav kumar"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.10",
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "glyphicons": "^0.0.2"
+  }
+}
