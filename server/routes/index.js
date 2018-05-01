@@ -1,13 +1,7 @@
-
-
-
-
-
-
 module.exports = function (app) {
-    app.use('/users', require('./users'));
-    app.use('/', require('./home'));
-    
+	app.use('/user', require('./users'));
+	app.use('/', require('./home'));
+	
 }
 
 

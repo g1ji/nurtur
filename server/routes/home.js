@@ -1,9 +1,9 @@
-var root = require('../controllers/indexCtrl');
+var home = require('../controllers/homeCtrl');
 var express = require('express');
 var router = express.Router();
 
-module.exports = function (app) {
-    router.get('/',
-        root.home
-    );
-}
+router.get('/',
+	home.landingPage
+	);
+
+module.exports = router;

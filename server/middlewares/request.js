@@ -1,7 +1,6 @@
 var jwt = require('jwt-simple');
 
-module.exports = {
-    validateNewUserData: function (req, res, next) {
+exports.validateNewUserData = function (req, res, next) {
         var validatedData = {
             u_name: "",
             u_email: "",
@@ -37,13 +36,11 @@ module.exports = {
             req.error = errorPopup;
             next();
         }
+        console.log("+++++++++++++++++++++++++++++++++++++++++1");
         var secret = (new Date()).getTime();
         var payload = validatedData.u_pass;
         validatedData.u_pass = jwt.encode(payload, "secret");
         validatedData.u_secret = secret;
         req.validatedData = validatedData;
-        console.log(req.validatedData);
-        console.log(req.body);
-        next();
-    }
-};  
+        // next();
+    }; 
